@@ -15,7 +15,7 @@ opencv
 ```
 
 ## Network Architecture
-![graph](./images/Architecture.pdf)
+![graph](./images/Architecture.png)
 
 ## Train 
 ```
