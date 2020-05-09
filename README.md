@@ -1,4 +1,4 @@
-# Locally Adaptive Channel Attention-based Network for Denoising Images (IEEE ACCESS)
+# Locally Adaptive Channel Attention-Based Network for Denoising Images (IEEE ACCESS)
 [![AUR](https://img.shields.io/aur/license/yaourt.svg?style=plastic)](LICENSE)
 
 [Paper](https://ieeexplore.ieee.org/abstract/document/8999518) | [Bibtex](#Bibtex)
