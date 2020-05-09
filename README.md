@@ -14,6 +14,9 @@ numpy
 opencv
 ```
 
+## Network Architecture
+![graph](./images/Architecture.pdf)
+
 ## Train 
 ```
 $ python train.py --preprocess True
