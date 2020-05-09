@@ -18,7 +18,6 @@ def weights_init(m):
         m.weight.data.normal_(mean=0, std=math.sqrt(2./9./64.)).clamp_(-0.025,0.025)
         nn.init.constant_(m.bias.data, 0.0)
 
-
 def batch_PSNR(img, imclean, data_range):
     Img = img.data.cpu().numpy().astype(np.float32)
     Img = np.uint8(np.clip(Img*255,0 ,255 ))
@@ -41,7 +40,6 @@ def batch_SSIM(img, imclean, data_range):
     SSIM = 0
     SSIM += compare_ssim(Iclean, Img, data_range=data_range)
     return SSIM
-
 
 def data_augmentation(image, mode):
     out = np.transpose(image, (1,2,0))
