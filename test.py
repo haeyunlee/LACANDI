@@ -15,7 +15,7 @@ import time
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-parser = argparse.ArgumentParser(description="CANDI_Test")
+parser = argparse.ArgumentParser(description="LACANDI_Test")
 parser.add_argument("--logdir", type=str, default="logs", help='path of log files')
 parser.add_argument("--test_data", type=str, default='Set12', help='test on Set12 or Set68')
 parser.add_argument("--test_noiseL", type=float, default=25, help='noise level used on test set')
@@ -36,7 +36,7 @@ def main():
     model.eval()
     # load data info
     print('Loading data info ...\n')
-    files_source = glob.glob(os.path.join('data', opt.test_data, '*.*'))
+    files_source = glob.glob(os.path.join('data', opt.test_data, '*'))
     files_source.sort()
     # process data
     psnr_test = 0
