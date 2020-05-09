@@ -32,7 +32,7 @@ $ python test.py --test_data Set12 --output_size 10 --test_noiseL 25
 **NOTE**
 * *test_data* can be *Set12* or *Set68* or *Urban100*.
 * *output_size* can be any number from 1. Please refer to the paper on this part.
-* *test_noiseL* is used for testing.
+* *test_noiseL* can be *15* or *25* or *50*
 
 ## Bibtex
 ```
