@@ -8,7 +8,8 @@
 ```
 pytorch >= 1.3
 torchvision >= 0.4.1.
-
+tensorboardX
+hdf5
 numpy
 opencv
 ```

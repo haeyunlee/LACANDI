@@ -42,7 +42,6 @@ class CA(nn.Module):
             m.append(nn.BatchNorm2d(channels))
             m.append(nn.ReLU(inplace=True))
         m.append(nn.Conv2d(in_channels=channels, out_channels=channels, kernel_size=kernel_size, padding=padding, bias=True))
-        
         self.body = nn.Sequential(*m)
         self.se = SELayer(channels, self.num_i)
 
@@ -52,7 +51,6 @@ class CA(nn.Module):
         out = self.se(out)
         out += residual
         return out
-
 
 class SELayer(nn.Module):
     def __init__(self, channels, k, reduction = 16):
