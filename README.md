@@ -14,6 +14,15 @@ numpy
 opencv
 ```
 
+## Train 
+```
+$ python train.py --preprocess True
+```
+
+## Test
+```
+$ python test.py --test_data Set12 (or Set68, Urban100) --output_size 10
+```
 
 ## Bibtex
 ```
