@@ -15,7 +15,7 @@ from utils import *
 os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
-parser = argparse.ArgumentParser(description="LACANDI")
+parser = argparse.ArgumentParser(description="LACANDI_train")
 parser.add_argument("--preprocess", type=bool, default=False, help='run prepare_data or not')
 parser.add_argument("--batchSize", type=int, default=64, help="Training batch size")
 parser.add_argument("--epochs", type=int, default=120, help="Number of training epochs")
@@ -25,7 +25,7 @@ parser.add_argument("--outf", type=str, default="logs", help='path of log files'
 parser.add_argument("--mode", type=str, default="S", help='with known noise level (S) or blind training (B)')
 parser.add_argument("--noiseL", type=float, default=25, help='noise level; ignored when mode=B')
 parser.add_argument("--val_noiseL", type=float, default=25, help='noise level used on validation set')
-parser.add_argument("--output_size", type=int, default=10, help='The output size of average pooling in a channel attention module')
+parser.add_argument("--output_size", type=int, default=1, help='The output size of average pooling in a channel attention module')
 opt = parser.parse_args()
 
 def main():
@@ -121,7 +121,7 @@ def main():
         writer.add_image('noisy image', Imgn, epoch)
         writer.add_image('reconstructed image', Irecon, epoch)
         # save model
-        torch.save(model.state_dict(), os.path.join(opt.outf, 'net.pth'))
+        torch.save(model.state_dict(), os.path.join(opt.outf, 'net_%d.pth' %(opt.noiseL)))
 
 if __name__ == "__main__":
     if opt.preprocess:

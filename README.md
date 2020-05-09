@@ -4,8 +4,9 @@
 [Paper](https://ieeexplore.ieee.org/abstract/document/8999518) | [Bibtex](#Bibtex)
 
 
-## Dependancy
+## Dependancy & Requirment
 ```
+python3
 pytorch >= 1.3
 torchvision >= 0.4.1.
 tensorboardX
@@ -21,11 +22,17 @@ opencv
 ```
 $ python train.py --preprocess True
 ```
+**NOTE**
+* If you've already built the training and validation dataset (i.e. train.h5 & val.h5 files), set *preprocess* to be False.
 
 ## Test
 ```
-$ python test.py --test_data Set12 (or Set68, Urban100) --output_size 10
+$ python test.py --test_data Set12 --output_size 10 --test_noiseL 25
 ```
+**NOTE**
+* *test_data* can be *Set12* or *Set68* or *Urban100*.
+* *output_size* can be any number from 1. Please refer to the paper on this part.
+* *test_noiseL* is used for testing.
 
 ## Bibtex
 ```

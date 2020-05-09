@@ -17,7 +17,7 @@ os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 
 parser = argparse.ArgumentParser(description="LACANDI_Test")
 parser.add_argument("--logdir", type=str, default="logs", help='path of log files')
-parser.add_argument("--test_data", type=str, default='Set12', help='test on Set12 or Set68')
+parser.add_argument("--test_data", type=str, default='Set12', help='test on Set12 or Set68 or Urban100')
 parser.add_argument("--test_noiseL", type=float, default=25, help='noise level used on test set')
 parser.add_argument("--output_size", type=int, default=10, help='The output size of average pooling in a channel attention module')
 opt = parser.parse_args()
