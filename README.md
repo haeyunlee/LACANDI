@@ -33,6 +33,7 @@ $ python test.py --test_data Set12 --output_size 10 --test_noiseL 25
 * *test_data* can be *Set12* or *Set68* or *Urban100*.
 * *output_size* can be any number from 1. Please refer to the paper on this part.
 * *test_noiseL* can be *15* or *25* or *50*
+* pretrained weights for each noise level are provided in *logs/*
 
 ## Bibtex
 ```
