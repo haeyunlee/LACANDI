@@ -3,6 +3,7 @@
 
 [Paper](https://ieeexplore.ieee.org/abstract/document/8999518) | [Bibtex](#Bibtex)
 
+The code is built on [DnCNN (PyTorch)](https://github.com/SaoYan/DnCNN-PyTorch) and tested on Ubuntu 16.04/18.04 environment (Python3.6, PyTorch_1.3.0, CUDA10.1, cuDNN7.6) with Titan RTX/2080Ti GPUs.
 
 ## Dependancy & Requirment
 ```
