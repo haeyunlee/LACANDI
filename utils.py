@@ -24,7 +24,6 @@ def batch_PSNR(img, imclean, data_range):
     Img = Img.astype(np.float32) / 255.
     Iclean = imclean.data.cpu().numpy().astype(np.float32)
     PSNR = 0
-    print(Img.shape)
     for i in range(1):
         PSNR += compare_psnr(Iclean[i,:,:,:], Img[i,:,:,:], data_range=data_range)
     return (PSNR/Img.shape[0])
